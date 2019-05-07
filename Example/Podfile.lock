@@ -1,0 +1,16 @@
+PODS:
+  - FFPickerView (0.1.0)
+
+DEPENDENCIES:
+  - FFPickerView (from `../`)
+
+EXTERNAL SOURCES:
+  FFPickerView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FFPickerView: 2fc2c8941f4f279cf6eb20c9265f47804560fbf3
+
+PODFILE CHECKSUM: 3ba571ed5efbd740437a0d256ed074215a684469
+
+COCOAPODS: 1.5.3

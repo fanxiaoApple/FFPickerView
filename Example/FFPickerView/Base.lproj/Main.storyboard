@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,61 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-GL-Zgx">
+                                <rect key="frame" x="15" y="140" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Tk-d7-qtf"/>
+                                </constraints>
+                                <state key="normal" title="单列"/>
+                                <connections>
+                                    <action selector="singleComp:" destination="whP-gf-Uak" eventType="touchUpInside" id="0Na-Ps-34q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-zE-wAT">
+                                <rect key="frame" x="15" y="190" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="多列（字典）"/>
+                                <connections>
+                                    <action selector="mutipleComDic:" destination="whP-gf-Uak" eventType="touchUpInside" id="rnz-Ax-XkV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V63-WI-mYb">
+                                <rect key="frame" x="15" y="240" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="多列（数组）"/>
+                                <connections>
+                                    <action selector="mutipleComArr:" destination="whP-gf-Uak" eventType="touchUpInside" id="KJI-E9-Vgr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwx-9R-5wl">
+                                <rect key="frame" x="15" y="290" width="345" height="40"/>
+                                <color key="backgroundColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="任意列"/>
+                                <connections>
+                                    <action selector="complexComp:" destination="whP-gf-Uak" eventType="touchUpInside" id="ODo-mE-DNE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Gx-zE-wAT" firstAttribute="trailing" secondItem="TOM-GL-Zgx" secondAttribute="trailing" id="34P-EX-x0L"/>
+                            <constraint firstItem="V63-WI-mYb" firstAttribute="height" secondItem="TOM-GL-Zgx" secondAttribute="height" id="3ev-Ep-Ju6"/>
+                            <constraint firstItem="iwx-9R-5wl" firstAttribute="height" secondItem="TOM-GL-Zgx" secondAttribute="height" id="4fR-zK-9LS"/>
+                            <constraint firstAttribute="trailing" secondItem="TOM-GL-Zgx" secondAttribute="trailing" constant="15" id="6t0-Wu-Lvn"/>
+                            <constraint firstItem="iwx-9R-5wl" firstAttribute="leading" secondItem="TOM-GL-Zgx" secondAttribute="leading" id="G3B-3l-dxK"/>
+                            <constraint firstItem="TOM-GL-Zgx" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="15" id="SQv-Xs-Jm1"/>
+                            <constraint firstItem="V63-WI-mYb" firstAttribute="trailing" secondItem="TOM-GL-Zgx" secondAttribute="trailing" id="SX2-bB-4Ij"/>
+                            <constraint firstItem="V63-WI-mYb" firstAttribute="leading" secondItem="TOM-GL-Zgx" secondAttribute="leading" id="Srh-ri-Mpf"/>
+                            <constraint firstItem="4Gx-zE-wAT" firstAttribute="leading" secondItem="TOM-GL-Zgx" secondAttribute="leading" id="Yfc-jD-zf7"/>
+                            <constraint firstItem="iwx-9R-5wl" firstAttribute="top" secondItem="V63-WI-mYb" secondAttribute="bottom" constant="10" id="Z9Y-BZ-RJR"/>
+                            <constraint firstItem="iwx-9R-5wl" firstAttribute="trailing" secondItem="TOM-GL-Zgx" secondAttribute="trailing" id="acG-5z-dHm"/>
+                            <constraint firstItem="4Gx-zE-wAT" firstAttribute="top" secondItem="TOM-GL-Zgx" secondAttribute="bottom" constant="10" id="hsP-jF-laO"/>
+                            <constraint firstItem="4Gx-zE-wAT" firstAttribute="height" secondItem="TOM-GL-Zgx" secondAttribute="height" id="jHU-dz-Ueg"/>
+                            <constraint firstItem="TOM-GL-Zgx" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="120" id="sfG-i2-sJB"/>
+                            <constraint firstItem="V63-WI-mYb" firstAttribute="top" secondItem="4Gx-zE-wAT" secondAttribute="bottom" constant="10" id="zK9-4M-wuN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

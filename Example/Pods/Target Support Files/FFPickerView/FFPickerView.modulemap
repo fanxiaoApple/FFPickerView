@@ -1,0 +1,6 @@
+framework module FFPickerView {
+  umbrella header "FFPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}
